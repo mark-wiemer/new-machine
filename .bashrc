@@ -43,12 +43,14 @@ function timer_stop {
 PROMPT_COMMAND=timer_stop
 
 # PROMPT
+# White "[last: {N}s]", N an integer time in seconds for last command to execute
+  # N can be off by +/- 1
+# newline
 # Yellow current working directory
 # Light blue git branch in parentheses
 # newline
-# White "[last: {N}s]", N an integer time in seconds for last command to execute
-  # N can be off by +/- 1
-PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n[last: ${timer_show}s] \$ '
+# $
+PS1='[last: ${timer_show}s]\n\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n \$ '
 
 # Every time the user enters a command, print date and call `timer_start`
 # Do the trap last so we don't have excessive commands being run while sourcing
