@@ -43,8 +43,9 @@ function timer_stop {
 PROMPT_COMMAND=timer_stop
 
 # PROMPT
-# White "[last: {N}s]", N an integer time in seconds for last command to execute
+# White "[last: {N}s]", N an integer time in seconds for last input to execute
   # N can be off by +/- 1
+  # Works with multiple commands entered at once, e.g. `echo 1 && echo 2` :)
 # newline
 # Yellow current working directory
 # Light blue git branch in parentheses
