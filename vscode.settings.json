@@ -1,0 +1,109 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "editor.rulers": [80, 120],
+  "explorer.confirmDragAndDrop": false,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "extensions.ignoreRecommendations": true,
+  "window.restoreWindows": "preserve",
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "editor.stickyTabStops": true,
+  "editor.codeLensFontSize": 14,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "editor.mouseWheelZoom": true,
+  "editor.wordWrapColumn": 120,
+  "window.menuBarVisibility": "compact",
+  "files.exclude": {
+    "**/.node_modules": true,
+    "**/HR-TAL-Lnr-NetCoursePlayer": true
+  },
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.tabs.location": "left",
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "git.inputValidationLength": 99999,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.bracketPairColorization.enabled": true,
+  "git.confirmSync": false,
+  "editor.inlayHints.enabled": "onUnlessPressed",
+  "terminal.integrated.tabs.enabled": false,
+  "git.branchProtection": ["main"],
+  "editor.suggest.preview": true,
+  "editor.stickyScroll.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.stickyScroll.maxLineCount": 10,
+  "files.associations": {
+    "*.txt": "plaintext"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    "yaml": true,
+    "typescript": true,
+    "csharp": true
+  },
+  "jestrunner.codeLens": ["run", "debug", "watch"],
+  "open-in-browser.default": "Edge",
+  "playwright.reuseBrowser": false,
+  "debug.onTaskErrors": "abort",
+  "extensions.confirmedUriHandlerExtensionIds": [
+    "ms-dotnettools.dotnet-interactive-vscode",
+    "ms-dotnettools.vscode-dotnet-pack"
+  ],
+  "editor.formatOnSave": true,
+  "git.pullBeforeCheckout": true,
+  "git.fetchOnPull": true,
+  "playwright.showTrace": false,
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "explorer.copyRelativePathSeparator": "/",
+  "markdown.preferredMdPathExtensionStyle": "includeExtension",
+  "editor.unicodeHighlight.allowedCharacters": {
+    "–": true
+  },
+  "diffEditor.renderSideBySide": false
+}
