@@ -7,23 +7,22 @@ source /etc/profile.d/git-prompt.sh
 
 alias bashedit='code ~/.bashrc'
 alias bs='npm run build && npm start'
+# Git Diff main Shortstat
+alias gds='git diff main --shortstat'
 # Delete merged local branches
 alias gitdelete='git branch --merged | egrep -v "(^\*|main)" | xargs git branch -d'
 # Git Push New branch, works for existing branches as well
 alias gpn='git push --set-upstream origin $(__git_ps1 "%s")'
+# Git Pull and Merge main
+alias gpm='b=$(__git_ps1 "%s") && git checkout main && git pull && git checkout $b && git merge main'
+# npm Install with Legacy peer deps
+alias npmil='npm i --legacy-peer-deps'
+# npm install with version 6, then revert back to version 8
+alias npmi6='npm install npm@^6 --global && npm i && npm install npm@^8 --global'
 # Create a PR branch to review changes locally
-alias pr='git status && git branch -D pr && git checkout -b pr && git reset main'
+alias pr='git status && git branch -D pr; git checkout -b pr && git reset main'
 # Source Bash Run Commands
 alias sbrc='source ~/.bashrc'
-
-# Aliases for autohotkey-scripts repo. Should be moved out of this file, :shrug:
-# Stash and pop all autohotkey-scripts changes in all submodules
-# Go from bottom up to be safe, I'm not comfortable with submodules yet
-alias stash='cd ~/source/repos/autohotkey-scripts/lib/Chrome.ahk/lib/AutoHotkey-JSON && git stash && cd ../WebSocket.ahk && git stash && cd ../.. && git stash && cd ../.. && git stash'
-alias pop='cd ~/source/repos/autohotkey-scripts/lib/Chrome.ahk/lib/AutoHotkey-JSON && git stash pop; cd ../WebSocket.ahk && git stash pop; cd ../.. && git stash pop; cd ../.. && git stash pop'
-# Checkout branches for different versions of AHK
-alias v1='cd ~/source/repos/autohotkey-scripts && git co main && git pull'
-alias v2='cd ~/source/repos/autohotkey-scripts && git co v2 && git pull'
 
 # Store time in seconds for last command
 # Adapted from https://stackoverflow.com/a/1862762
@@ -51,7 +50,7 @@ PROMPT_COMMAND=timer_stop
 # Light blue git branch in parentheses
 # newline
 # $
-PS1='[last: ${timer_show}s]\n\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n \$ '
+PS1='[last: ${timer_show}s]\n\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n\$ '
 
 # Every time the user enters a command, print date and call `timer_start`
 # Do the trap last so we don't have excessive commands being run while sourcing
