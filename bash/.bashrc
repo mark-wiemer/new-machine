@@ -7,6 +7,7 @@ source /etc/profile.d/git-prompt.sh
 
 alias bashedit='code ~/.bashrc'
 alias bs='npm run build && npm start'
+alias brd='bun run dev'
 # Git Diff main Shortstat
 alias gds='git diff main --shortstat'
 # Delete merged local branches
