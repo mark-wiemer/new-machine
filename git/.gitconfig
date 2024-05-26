@@ -2,19 +2,21 @@
 # open this file with `git config --global --edit`
 [alias]
     amano = commit --amend -a --no-edit # AMend All NO edit
-    bme = branch -l 'users/mwiemer/[a-zA-Z0-9]*' # Branches by ME
-    bdemo = branch -l 'users/mwiemer/_demo/*' # Branches that are DEMOs
+    bme = branch -l 'users/markwiemer/[a-zA-Z0-9]*' # Branches by ME
+    bdemo = branch -l 'users/markwiemer/.demo/*' # Branches that are DEMOs
     co = checkout
-    come = "!sh -c \"git checkout users/mwiemer/$1\" -" # CheckOut a branch by ME
+    come = "!sh -c \"git checkout users/markwiemer/$1\" -" # CheckOut a branch by ME
     cam = commit -a --amend # Commit All via aMend
     deletemerged = "!sh -c \"git branch --merged origin/main | grep -v main | xargs git branch -d\""
     edit = config --global --edit
     logm = log main.. # LOG changes since Main
     logone = log --pretty=format:%C(green)%h%C(blue) %an%C(yellow) %s%C(magenta)%d
-    new = "!sh -c \"git checkout -b users/mwiemer/$1\" -" # NEW branch for me
-    scome = "!sh -c \"git add . && git stash && git checkout users/mwiemer/$1\" -" # Stash and CheckOut a branch by ME
+    new = "!sh -c \"git checkout -b users/markwiemer/$1\" -" # NEW branch for me
+    scome = "!sh -c \"git add . && git stash && git checkout users/markwiemer/$1\" -" # Stash and CheckOut a branch by ME
 [core]
-    editor = \"C:\\Users\\mwiemer\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+    # todo choose Windows or Linux
+    # editor = \"C:\\Users\\markwiemer\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait # Windows
+    editor = code --wait # Linux
 [format]
     # pretty = format:%C(green)%h%C(blue) %an%C(yellow) %s%C(magenta)%d%C(white)%+b # all details
     pretty = format:%C(green)%h%C(blue) %an%C(yellow) %s%C(magenta)%d # oneline
