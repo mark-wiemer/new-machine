@@ -49,5 +49,13 @@
     "key": "ctrl+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+k ctrl+alt+r",
+    "command": "workbench.action.restartExtensionHost"
+  },
+  {
+    "key": "alt+f11",
+    "command": "cSpell.addWordToUserSettings"
   }
 ]
