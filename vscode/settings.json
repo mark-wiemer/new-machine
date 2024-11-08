@@ -4,7 +4,6 @@
   "explorer.confirmDelete": false,
   "editor.rulers": [80, 120],
   "explorer.confirmDragAndDrop": false,
-  "editor.accessibilitySupport": "off",
   "search.exclude": {
     "**/node_modules": false
   },
@@ -415,5 +414,9 @@
   "AHK++.v1.formatter": {
     "allowedNumberOfEmptyLines": 1,
     "trimExtraSpaces": false
-  }
+  },
+  "window.titleBarStyle": "custom",
+  "editor.wordWrap": "bounded",
+  "editor.accessibilitySupport": "off",
+  "window.titleSeparator": " - "
 }
