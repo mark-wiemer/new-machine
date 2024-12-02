@@ -1,5 +1,4 @@
-# file has todos
-# open this file with `git config --global --edit` or `notepad ~/.gitconfig`
+# open this file with `git edit`, `notepad ~/.gitconfig`, or `git config --global --edit`
 [alias]
     amano = commit --amend -a --no-edit # AMend All NO edit
     bme = branch -l 'users/markwiemer/[a-zA-Z0-9]*' # Branches by ME
