@@ -14,15 +14,13 @@
     new = "!sh -c \"git checkout -b users/markwiemer/$1\" -" # NEW branch for me
     scome = "!sh -c \"git add . && git stash && git checkout users/markwiemer/$1\" -" # Stash and CheckOut a branch by ME
 [core]
-    # todo choose Windows or Linux
-    # editor = \"C:\\Program Files\\VSCodium\\VSCodium.exe\" --wait # Windows, VSCodium
-    editor = code --wait # Linux, VS Code
+    editor = codium --wait
 [format]
     # pretty = format:%C(green)%h%C(blue) %an%C(yellow) %s%C(magenta)%d%C(white)%+b # all details
     pretty = format:%C(green)%h%C(blue) %an%C(yellow) %s%C(magenta)%d # oneline
 [user]
     name = Mark Wiemer
-    email = markwiemer@outlook.com # todo double check work vs professional
+    email = markwiemer@outlook.com
 [fetch]
     prune = true
 [pull]
