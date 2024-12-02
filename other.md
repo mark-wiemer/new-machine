@@ -16,15 +16,14 @@ Other steps to get the machine working like I want it :)
 
 ## Snipaste
 
-1. winget install snipaste
-
-2. Update preferences:
+1. Update preferences:
 
     ![new preferences](https://github.com/user-attachments/assets/f3e6199e-f7e4-4c8e-b45f-83272b3e6ffa)
 
+## Remove recycle bin desktop icon
+
+Settings > Personalization > Themes > Desktop icon settings > uncheck "Recycle Bin"
 
 ## Other programs
 
-- Git (winget install Git.Git)
-- VSCodium (winget install vscodium)
-- Everything (winget install voidtools.Everything)
+`winget install Git.Git vscodium voidtools.Everything snipaste`
