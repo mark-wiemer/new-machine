@@ -16,3 +16,4 @@
 
 - Git (winget install Git.Git)
 - VSCodium (winget install vscodium)
+- Everything (winget install voidtools.Everything)
