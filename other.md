@@ -4,6 +4,7 @@
 
 1. Device Manager -> Find device -> Properties -> Details -> Device instance path -> Copy value
 2. Registry editor -> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID -> Go to path -> Device Parameters -> FlipFlopWheel = 1
+3. Unplug device and plug it back in
 
 ## Upgrade AdBlock Plus
 
