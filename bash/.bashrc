@@ -10,7 +10,7 @@ alias update='cd ~/myStuff/games/Luanti/games/lanterns_flame && git pull'
 alias ulf='cd ~/myStuff/repos/luanti/lanterns_flame && gpn && update && cd ~/myStuff/repos/luanti/lanterns_flame'
 
 #* Scripts
-alias bashedit='"C:\\Program Files\\VSCodium\\VSCodium.exe" ~/.bashrc'
+alias bashedit='codium ~/.bashrc'
 alias bs='npm run build && npm start'
 alias brd='bun run dev'
 # Git Commit All with Message
