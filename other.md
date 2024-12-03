@@ -4,8 +4,8 @@ Other steps to get the machine working like I want it :)
 
 ## Invert scroll Windows 11
 
-1. Device Manager -> Find device -> Properties -> Details -> Device instance path -> Copy value
-2. Registry editor -> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID -> Go to path -> Device Parameters -> FlipFlopWheel = 1
+1. Device Manager > Find device > Properties > Details > Device instance path > Copy value
+2. Registry editor > HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID > Go to path > Device Parameters > FlipFlopWheel = 1
 3. Unplug device and plug it back in
 
 ## Upgrade AdBlock Plus
@@ -23,6 +23,10 @@ Other steps to get the machine working like I want it :)
 ## Remove recycle bin desktop icon
 
 Settings > Personalization > Themes > Desktop icon settings > uncheck "Recycle Bin"
+
+## Disable Windows lock screen
+
+Registry editor > Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows > New key > Personalization > New DWORD (32-bit) Value > NoLockScreen > NoLockScreen = 1
 
 ## Other programs
 
