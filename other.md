@@ -26,4 +26,6 @@ Settings > Personalization > Themes > Desktop icon settings > uncheck "Recycle B
 
 ## Other programs
 
-`winget install Git.Git vscodium voidtools.Everything snipaste devcom.luajit`
+`winget install Git.Git vscodium voidtools.Everything snipaste devcom.lua`
+
+- Lua is preferred over LuaJIT as performance is not a high priority but ease of setup is. `luajit chess.lua` doesn't work out-of-the-box as of this writing, but `lua chess.lua` does.
