@@ -26,4 +26,4 @@ Settings > Personalization > Themes > Desktop icon settings > uncheck "Recycle B
 
 ## Other programs
 
-`winget install Git.Git vscodium voidtools.Everything snipaste`
+`winget install Git.Git vscodium voidtools.Everything snipaste devcom.luajit`
