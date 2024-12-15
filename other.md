@@ -4,9 +4,15 @@ Other steps to get the machine working like I want it :)
 
 ## Invert scroll Windows 11
 
+Windows 11 24H2: Settings > "scroll direction"
+
+Older:
+
 1. Device Manager > Find device > Properties > Details > Device instance path > Copy value
 2. Registry editor > HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID > Go to path > Device Parameters > FlipFlopWheel = 1
 3. Unplug device and plug it back in
+
+4. Note that this only works for that device plugged into that port :/
 
 ## Upgrade AdBlock Plus
 
