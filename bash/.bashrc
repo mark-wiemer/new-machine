@@ -69,10 +69,7 @@ PS1='[last: ${timer_show}s]\n\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n\
 
 # fnm
 FNM_PATH="/c/Users/markw/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
+eval "$(fnm env --use-on-cd --shell bash)"
 
 # Every time the user enters a command, print date and call `timer_start`
 # Do the trap last so we don't have excessive commands being run while sourcing
