@@ -2,6 +2,10 @@
 
 Other steps to get the machine working like I want it :)
 
+## Minimize animations
+
+https://stackoverflow.com/questions/59708960/how-do-i-change-the-prefers-reduced-motion-setting-in-browsers
+
 ## Invert scroll Windows 11
 
 Windows 11 24H2: Settings > "scroll direction"
