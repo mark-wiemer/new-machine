@@ -9,7 +9,7 @@
 [servers.liberachat]
 nickname = "mark-wiemer"
 server = "irc.libera.chat"
-channels = ["#minetest-docs"]
+channels = ["minetest", "#minetest-docs", "minetest-dev"]
 
 [servers.liberachat.sasl.plain]
 username = "mark-wiemer"
