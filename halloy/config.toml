@@ -1,0 +1,16 @@
+# ~/.config/halloy/config.toml
+# https://github.com/squidowl/halloy
+# Halloy config.
+# 
+#
+# For a complete list of available options,
+# please visit https://halloy.squidowl.org/configuration/index.html
+
+[servers.liberachat]
+nickname = "mark-wiemer"
+server = "irc.libera.chat"
+channels = ["#minetest-docs"]
+
+[servers.liberachat.sasl.plain]
+username = "mark-wiemer"
+password = "***" # todo get from password manager
