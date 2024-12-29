@@ -4,7 +4,7 @@ Other steps to get the machine working like I want it :)
 
 ## Minimize animations
 
-https://stackoverflow.com/questions/59708960/how-do-i-change-the-prefers-reduced-motion-setting-in-browsers
+[MDN docs on prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion#user_preferences)
 
 ## Invert scroll Windows 11
 
