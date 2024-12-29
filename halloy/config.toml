@@ -3,7 +3,6 @@
 # https://github.com/squidowl/halloy
 # Halloy config.
 # 
-#
 # For a complete list of available options,
 # please visit https://halloy.squidowl.org/configuration/index.html
 
@@ -14,4 +13,4 @@ channels = ["#minetest-docs"]
 
 [servers.liberachat.sasl.plain]
 username = "mark-wiemer"
-password = "***" # todo get from password manager
+password = "***"         # todo get from password manager
