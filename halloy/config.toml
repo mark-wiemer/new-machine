@@ -1,7 +1,5 @@
-# NixOS: ~/.config/halloy/config.toml
-# Windows: ???
 # https://github.com/squidowl/halloy
-# Halloy config.
+# Halloy config
 # 
 # For a complete list of available options,
 # please visit https://halloy.squidowl.org/configuration/index.html
