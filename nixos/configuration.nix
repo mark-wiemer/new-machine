@@ -8,8 +8,7 @@
 
 {
   imports =
-    [
-      # Include the results of the hardware scan.
+    [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       <home-manager/nixos>
     ];
@@ -78,7 +77,7 @@
     description = "Mark Wiemer";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      #  thunderbird
+    #  thunderbird
     ];
   };
 
@@ -96,18 +95,29 @@
   ];
   # Search https://search.nixos.org/packages
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
+    wget # HTTPS file fetcher
     discord
     protonvpn-gui
-    vscodium
+    vscodium # VSCode alternative
     git
-    obsidian
+    obsidian # Notes
     nodejs_22
-    halloy
-    nixpkgs-fmt
+    halloy # IRC Client
+    nixpkgs-fmt # Nix lang formatter
+    fsearch # File search, like voidtools Everything on Windows 
+    gnomeExtensions.clipboard-history
+    godot_4-mono
+    flameshot # Advanced screenshot software
   ];
-  home-manager.users.markw = { pkgs, ... }: {
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-6.0.428" # for Godot 4.3, ref https://forum.godotengine.org/t/about-when-until-4-4-stable/91714/4
+  ];
+  
+  # Steam
+  programs.steam.enable = true;
+  
+  # GNOME settings
+  home-manager.users.markw = { pkgs, ... }: {  
     # The state version is required and should stay at the version you
     # originally installed.
     home.stateVersion = "24.11";
@@ -118,7 +128,13 @@
         color-scheme = "prefer-dark";
       };
       "org/gnome/shell/keybindings" = {
-        toggle-message-tray = [ ];
+        toggle-message-tray = [];
+        show-screenshot-ui = ["F7"];
+      };
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        home = [
+          "<Super>e"
+        ];
       };
     };
   };
