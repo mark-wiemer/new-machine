@@ -1,0 +1,1 @@
+# Bash RC for WSL
