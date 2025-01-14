@@ -7,3 +7,8 @@ I'm trying out Linux Mint as an alternative to Windows and NixOS because I'm new
 1. Install Flameshot
 2. Setup a keyboard shortcut that activates `flameshot gui` on `F7`
 3. Use Ctrl+C to copy Flameshot selections :)
+
+## Firefox
+
+1. Vertical tabs: `about:config` > `sidebar.verticalTabs` > `true`
+2. Change default search engine
