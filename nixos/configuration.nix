@@ -8,7 +8,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       <home-manager/nixos>
     ];
@@ -27,12 +28,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # Set time zone and localization
   time.timeZone = "America/Los_Angeles";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -58,9 +56,6 @@
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -71,14 +66,38 @@
     pulse.enable = true;
   };
 
+  #* NVIDIA
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+  };
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true; # `nvidia-settings` cmd
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.markw = {
     isNormalUser = true;
     description = "Mark Wiemer";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "sudo" ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
+  };
+  # Allow sudo without password on console
+  security.sudo = {
+    enable = true;
+    extraRules = [{
+      users = [ "markw" ];
+      commands = [{ command = "ALL"; options = [ "NOPASSWD" ]; }];
+    }];
   };
 
   # Install firefox.
@@ -87,19 +106,21 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Packages to add or remove
   services.xserver.excludePackages = with pkgs; [
     xterm
   ];
   environment.gnome.excludePackages = with pkgs; [
     epiphany # web browser named "web"
   ];
-  # Search https://search.nixos.org/packages
   environment.systemPackages = with pkgs; [
+    # Search https://search.nixos.org/packages
     wget # HTTPS file fetcher
     discord
     protonvpn-gui
     vscodium # VSCode alternative
     git
+    git-lfs
     obsidian # Notes
     nodejs_22
     halloy # IRC Client
@@ -107,17 +128,25 @@
     fsearch # File search, like voidtools Everything on Windows 
     gnomeExtensions.clipboard-history
     godot_4-mono
-    flameshot # Advanced screenshot software
+    steam-run # Run non-NixOS binaries, ref https://forum.godotengine.org/t/running-exported-project-on-nixos/57619/4
+    gimp-with-plugins
+    hugo
   ];
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-sdk-6.0.428" # for Godot 4.3, ref https://forum.godotengine.org/t/about-when-until-4-4-stable/91714/4
   ];
-  
+
   # Steam
   programs.steam.enable = true;
-  
+  programs.steam.protontricks.enable = true;
+  programs.steam.localNetworkGameTransfers.openFirewall = true;
+  programs.steam.extraCompatPackages = with pkgs; [
+    proton-ge-bin
+  ];
+  hardware.graphics.enable32Bit = true;
+
   # GNOME settings
-  home-manager.users.markw = { pkgs, ... }: {  
+  home-manager.users.markw = { pkgs, ... }: {
     # The state version is required and should stay at the version you
     # originally installed.
     home.stateVersion = "24.11";
@@ -128,8 +157,8 @@
         color-scheme = "prefer-dark";
       };
       "org/gnome/shell/keybindings" = {
-        toggle-message-tray = [];
-        show-screenshot-ui = ["F7"];
+        toggle-message-tray = [ ];
+        show-screenshot-ui = [ "F7" ];
       };
       "org/gnome/settings-daemon/plugins/media-keys" = {
         home = [
