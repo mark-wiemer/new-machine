@@ -12,3 +12,5 @@ I'm trying out Linux Mint as an alternative to Windows and NixOS because I'm new
 
 1. Vertical tabs: `about:config` > `sidebar.verticalTabs` > `true`
 2. Change default search engine
+3. Firefox is probably up-to-date, but can only be updated via [Update Manager](https://forums.linuxmint.com/viewtopic.php?t=412975)
+   > View current version at Menu > Help > About Firefox
