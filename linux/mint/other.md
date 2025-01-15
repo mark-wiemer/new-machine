@@ -36,11 +36,16 @@ Shortcut | `.desktop` file
 4. Right click panel > Panel settings > Panel edit mode > Drag Cinnamenu to the left, replacing Menu
 
 
-## Snipaste alternative: Flameshot
+## Flameshot (for screenshots, like Snipaste)
 
 1. Install from Software Manager
 2. Setup a keyboard shortcut that activates `flameshot gui` on `F7`
 3. Use Ctrl+C to copy Flameshot selections :)
+
+## FSearch (for file search, like Everything)
+
+1. Install from Software Manager
+2. To set it to scan everything, select Other Locations > This Computer
 
 ## Godot
 
