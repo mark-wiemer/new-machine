@@ -11,6 +11,9 @@ Start Menu | home menu
 Windows key, abbr. `Win` | Super key, abbr. `<Super>`
 Shortcut | `.desktop` file
 
+## Installing arbitrary software
+
+`amd64.deb` files are best for my current machine, others may vary. I should probably learn what all the variations are all about, huh?
 
 ## Clipboard history: Diodon
 
