@@ -13,7 +13,7 @@ Shortcut | `.desktop` file
 
 ## Installing arbitrary software
 
-`amd64.deb` files are best for my current machine, others may vary. I should probably learn what all the variations are all about, huh?
+`amd64.deb` files are best for my current machine, others may vary. I should probably learn what all the variations are all about, huh? [Microsoft Edge download](https://www.microsoft.com/en-us/edge/) seems to be pretty good at automatically choosing the right version for the current machine, probably copy whatever that installs. But use Firefox instead.
 
 ## Clipboard history: Diodon
 
