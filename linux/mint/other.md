@@ -50,6 +50,12 @@ Shortcut | `.desktop` file
 1. Install from Software Manager
 2. To set it to scan everything, select Other Locations > This Computer
 
+
+## Baobob Disk Usage Analyzer (like WinDirStat)
+
+1. Install from https://flathub.org/apps/org.gnome.baobab
+
+
 ## Proton Pass
 
 1. Install from https://proton.me/pass/download
