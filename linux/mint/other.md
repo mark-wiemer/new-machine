@@ -50,6 +50,10 @@ Shortcut | `.desktop` file
 1. Install from Software Manager
 2. To set it to scan everything, select Other Locations > This Computer
 
+## Proton Pass
+
+1. Install from https://proton.me/pass/download
+
 ## Godot
 
 1. Install from [godotengine.org](https://godotengine.org) (Software Manager only has v3)
