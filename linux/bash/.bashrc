@@ -156,7 +156,7 @@ alias vcf='npm run validate:ci:fix'
 # Light blue git branch in parentheses
 # newline
 # "$ "
-PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n\$ '
+PS1='\[\033[33m\]\w\[\033[36m\] (`__git_ps1`)\[\033[0m\]\n\$ '
 
 # fnm
 FNM_PATH="/home/markw/.local/share/fnm"
