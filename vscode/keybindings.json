@@ -1,60 +1,92 @@
 [
-  {
-    "key": "ctrl+right",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+left",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+shift+backspace",
-    "command": "deleteInsideWord",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+delete",
-    "command": "deleteInsideWord",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+o",
-    "command": "git.openFile"
-  },
-  {
-    "key": "ctrl+shift+,",
-    "command": "workbench.action.openSettingsJson"
-  },
-  {
-    "key": "ctrl+k ctrl+shift+,",
-    "command": "workbench.action.openWorkspaceSettingsFile"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "workbench.action.toggleDevTools"
-  },
-  {
-    "key": "ctrl+k ctrl+shift+r",
-    "command": "workbench.action.reloadWindow"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.reloadWindow",
-    "when": "isDevelopment"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+k ctrl+alt+r",
-    "command": "workbench.action.restartExtensionHost"
-  },
-  {
-    "key": "alt+f11",
-    "command": "cSpell.addWordToUserSettings"
-  }
-]
+    {
+      "key": "ctrl+right",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+left",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+shift+backspace",
+      "command": "deleteInsideWord",
+      "when": "textInputFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+shift+delete",
+      "command": "deleteInsideWord",
+      "when": "textInputFocus && !editorReadonly"
+    },
+    {
+      "key": "alt+o",
+      "command": "git.openFile"
+    },
+    {
+      "key": "ctrl+shift+,",
+      "command": "workbench.action.openSettingsJson"
+    },
+    {
+      "key": "ctrl+k ctrl+shift+,",
+      "command": "workbench.action.openWorkspaceSettingsFile"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "workbench.action.toggleDevTools"
+    },
+    {
+      "key": "ctrl+k ctrl+shift+r",
+      "command": "workbench.action.reloadWindow"
+    },
+    {
+      "key": "ctrl+r",
+      "command": "-workbench.action.reloadWindow",
+      "when": "isDevelopment"
+    },
+    {
+      "key": "ctrl+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+k ctrl+alt+r",
+      "command": "workbench.action.restartExtensionHost"
+    },
+    {
+      "key": "alt+f11",
+      "command": "cSpell.addWordToUserSettings"
+    },
+    // #region Commands for Linux to match Windows
+    {
+        "key": "shift+alt+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    }
+    // #endregion
+  ]
