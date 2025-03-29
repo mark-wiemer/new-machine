@@ -119,7 +119,8 @@ fi
 #endregion
 
 # Adapted from https://stackoverflow.com/a/12142066
-alias __git_ps1=$(echo git symbolic-ref --short HEAD)
+# https://git-scm.com/docs/git-symbolic-ref
+alias __git_ps1=$(echo git symbolic-ref --short HEAD -q)
 
 #* Scripts
 alias bashedit='codium ~/.bashrc'
