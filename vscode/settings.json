@@ -27,28 +27,7 @@
   "editor.wordWrapColumn": 120,
   "window.menuBarVisibility": "compact",
   "files.exclude": {
-    "**/.node_modules": true,
-    "**/HR-TAL-Lnr-NetCoursePlayer": true
-  },
-  "terminal.integrated.profiles.osx": {
-    "bash": {
-      "path": "bash",
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh"
-    },
-    "fish": {
-      "path": "fish"
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux"
-    },
-    "pwsh": {
-      "path": "pwsh",
-      "icon": "terminal-powershell"
-    }
+    "**/.node_modules": true
   },
   "terminal.integrated.tabs.location": "left",
   "security.workspace.trust.untrustedFiles": "newWindow",
@@ -418,5 +397,6 @@
   "window.titleBarStyle": "custom",
   "editor.wordWrap": "bounded",
   "editor.accessibilitySupport": "off",
-  "window.titleSeparator": " - "
+"window.titleSeparator": " - ",
+"terminal.integrated.defaultProfile.linux": "bash"
 }
