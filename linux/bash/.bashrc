@@ -118,10 +118,11 @@ if ! shopt -oq posix; then
 fi
 #endregion
 
-source /etc/bash_completion.d/git-prompt
+# Adapted from https://stackoverflow.com/a/12142066
+alias __git_ps1=$(echo git symbolic-ref --short HEAD)
 
 #* Scripts
-alias bashedit='code ~/.bashrc'
+alias bashedit='codium ~/.bashrc'
 alias bs='npm run build && npm start'
 alias brd='bun run dev'
 # Git Commit All with Message
@@ -156,3 +157,10 @@ alias vcf='npm run validate:ci:fix'
 # newline
 # "$ "
 PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n\$ '
+
+# fnm
+FNM_PATH="/home/markw/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
