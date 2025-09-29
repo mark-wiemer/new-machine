@@ -21,8 +21,6 @@ Older:
 ## Upgrade AdBlock Plus
 
 1. https://accounts.adblockplus.org/en/premium
-2. "Activate here"
-3. Follow instructions
 
 ## Snipaste
 
