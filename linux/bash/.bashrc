@@ -120,10 +120,10 @@ fi
 
 # Adapted from https://stackoverflow.com/a/12142066
 # https://git-scm.com/docs/git-symbolic-ref
-alias __git_ps1=$(echo git symbolic-ref --short HEAD -q)
+# alias __git_ps1=$(echo git symbolic-ref --short HEAD -q)
 
 #* Scripts
-alias bashedit='codium ~/.bashrc'
+alias bashedit='code ~/.bashrc'
 alias bs='npm run build && npm start'
 alias brd='bun run dev'
 # Git Commit All with Message
@@ -153,11 +153,12 @@ alias sbrc='source ~/.bashrc'
 alias vcf='npm run validate:ci:fix'
 
 # PROMPT
-# Yellow current working directory
-# Light blue git branch in parentheses
+# Yellow current working directory (\w)
+# Light blue git branch in parentheses (__git_ps1)
 # newline
+# Light blue Node version
 # "$ "
-PS1='\[\033[33m\]\w\[\033[36m\] (`__git_ps1`)\[\033[0m\]\n\$ '
+PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1`\nNode $(node --version)\[\033[0m\]\n\$ '
 
 # fnm
 FNM_PATH="/home/markw/.local/share/fnm"
