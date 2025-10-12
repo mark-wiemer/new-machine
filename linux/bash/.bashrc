@@ -155,10 +155,10 @@ alias vcf='npm run validate:ci:fix'
 # PROMPT
 # Yellow current working directory (\w)
 # Light blue git branch in parentheses (__git_ps1)
+# Pink Node version
 # newline
-# Light blue Node version
 # "$ "
-PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1`\nNode $(node --version)\[\033[0m\]\n\$ '
+PS1='\[\033[33m\]\w\[\033[36m\]`__git_ps1` \[\033[35m\]Node $(node --version)\[\033[0m\]\n\$ '
 
 # fnm
 FNM_PATH="/home/markw/.local/share/fnm"
