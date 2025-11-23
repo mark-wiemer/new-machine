@@ -72,9 +72,9 @@ Shortcut | `.desktop` file
    Version=1.0
    Type=Application
    Terminal=false
-   Exec=/home/markw/myStuff/apps/Godot_v4.3-stable_linux.x86_64
+   Exec=/home/markw/my-stuff/apps/Godot_v4.3-stable_linux.x86_64
    Name=Godot 4.3
-   Icon=/home/markw/myStuff/apps/godot.svg
+   Icon=/home/markw/my-stuff/apps/godot.svg
    ```
    > SVG from https://godotengine.org/assets/press/icon_color.svg, works fine without it, just nice QoL
 6. Run from typing "Godot" in home menu as a sanity check
